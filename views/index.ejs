@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui-theme-default.css"/>
+    <%# Custom StyleSheet for Black Color (Totally Optional)%>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/black.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<%# Bot Declaration%>
+<div class="botui-app-container" id="api-bot">
+    <div class="header">
+        <img src="src/images/Logo_White.png">
+    </div>
+    <bot-ui></bot-ui>
+    <div class="col-xs-12">
+        <input type="text" name="bla" id="test123" placeholder="tapez un message" class="bla form-control col-xs-9">
+        <img src="src/images/envoi.png" class="col-xs-3 form-control">
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <div class="row col-xs-12">
+                    <button class="gallery_product col-lg-6 col-md-6 col-sm-6 col-xs-6 " onclick="changeImage(1)">
+                        <img src="src/images/categories/categorie(1).png" class="img-responsive" id="1">
+                    </button>
+
+                    <button class="gallery_product col-lg-6 col-md-6 col-sm-6 col-xs-6 " onclick="changeImage(2)">
+                        <img src="src/images/categories/categorie(2).png" class="img-responsive" id="2">
+                    </button>
+                    <button class="gallery_product col-lg-6 col-md-6 col-sm-6 col-xs-6 " onclick="changeImage(3)">
+                        <img src="src/images/categories/categorie(3).png" class="img-responsive" id="3">
+                    </button>
+
+                    <button class="gallery_product col-lg-6 col-md-6 col-sm-6 col-xs-6 " onclick="changeImage(4)">
+                        <img src="src/images/categories/categorie(4).png" class="img-responsive" id="4">
+                    </button>
+                    <button class="gallery_product col-lg-6 col-md-6 col-sm-6 col-xs-6 " onclick="changeImage(5)">
+                        <img src="src/images/categories/categorie(5).png" class="img-responsive" id="5">
+                    </button>
+
+                    <button class="gallery_product col-lg-6 col-md-6 col-sm-6 col-xs-6 " onclick="changeImage(6)">
+                        <img src="src/images/categories/categorie(6).png" class="img-responsive" id="6">
+                    </button>
+                    <button class="gallery_product col-lg-6 col-md-6 col-sm-6 col-xs-6 " onclick="changeImage(7)">
+                        <img src="src/images/categories/categorie(7).png" class="img-responsive" id="7">
+                    </button>
+
+                    <button class="gallery_product col-lg-6 col-md-6 col-sm-6 col-xs-6 " onclick="changeImage(8)">
+                        <img src="src/images/categories/categorie(8).png" class="img-responsive" id="8">
+                    </button>
+                    <button class="gallery_product col-lg-6 col-md-6 col-sm-6 col-xs-6 " onclick="changeImage(9)">
+                        <img src="src/images/categories/categorie(9).png" class="img-responsive" id="9">
+                    </button>
+
+                    <button class="gallery_product col-lg-6 col-md-6 col-sm-6 col-xs-6 " onclick="changeImage(10)">
+                        <img src="src/images/categories/categorie(10).png" class="img-responsive" id="10">
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                <button type="button" onclick="save()" class="btn btn-primary">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+</div>
+<%# JS STUFF%>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/botui/build/botui.js"></script>
+<%# Edit the Conversation from Convo.js%>
+<script src="javascripts/convo.js"></script>
+<script src="javascripts/socket.js"></script>
+
+</body>
+</html>
